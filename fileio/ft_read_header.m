@@ -1107,6 +1107,9 @@ switch headerformat
       filename = fullfile(pwd, filename);
     end
     hdr = read_mff_header(filename);
+  
+  case 'facet_txt'
+    hdr = readFACET_hdr(filename);
     
   case 'fcdc_buffer'
     % read from a networked buffer for realtime analysis

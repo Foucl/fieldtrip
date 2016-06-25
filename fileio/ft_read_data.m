@@ -702,6 +702,9 @@ switch dataformat
     end
     dat = asc.dat(chanindx,begsample:endsample);
     
+  case 'facet_txt'
+      dat = readFACET_data(filename, hdr, begsample, endsample, chanindx);
+    
   case 'fcdc_buffer'
     % read from a networked buffer for realtime analysis
     [host, port] = filetype_check_uri(filename);

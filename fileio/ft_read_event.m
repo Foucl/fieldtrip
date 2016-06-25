@@ -1022,6 +1022,9 @@ switch eventformat
       event(end  ).offset     = 0;
     end
     
+  case  'facet_txt'
+      event = readFACET_events(filename);
+    
   case 'fcdc_global'
     event = event_queue;
     
